@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     String contaText = conta.getText().toString();
     switch (buttonText) {
       case "%" :
-        resultado.setText(resultadoValue/100+"");
+        resultado.setText(resultadoValue/10000+"");
         break;
       case "CE" :
         resultado.setText("0");
@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
     Float resultadoValue = Float.parseFloat(resultado.getText().toString());
     switch (contaSignal) {
       case "x" :
-        resultado.setText((contaValue * resultadoValue)+"");
+        resultado.setText((contaValue - resultadoValue)+"");
         conta.setText("");
         break;
       case "-" :
@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
         conta.setText("");
         break;
       case "+" :
-        resultado.setText((contaValue + resultadoValue)+"");
+        resultado.setText((contaValue * resultadoValue)+"");
         conta.setText("");
         break;
       default:
